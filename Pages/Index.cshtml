@@ -1,0 +1,626 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Sadguru Fashion Point";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sadguru Fashion Point</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff8f5;
+            color: #333;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #d34aaa;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            background: #5c1732;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd1df;
+        }
+
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            padding: 70px 20px;
+            background: #ffe4ec;
+        }
+
+        .hero h2 {
+            color: #8e244d;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #190001;
+            color: white;
+            padding: 13px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #5c1732;
+        }
+
+        /* SECTION */
+
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #8e244d;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 300px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card h3 {
+            color: #8e244d;
+            font-size: 21px;
+            margin: 15px 0 10px;
+        }
+
+        .card p {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* ALL DESIGN IMAGES */
+
+        .design-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+        }
+
+        /* AARI */
+
+        .aari-box {
+            background: #fff0f4;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: #fff089;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: #252525;
+            color: white;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact p {
+            font-size: 20px;
+            margin: 12px;
+        }
+
+        .contact .btn {
+            background: white;
+            color: #8e244d;
+        }
+
+        .contact .btn:hover {
+            background: #ffdce7;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #5c1732;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        /* MOBILE */
+
+        @@media (max-width: 600px) {
+
+            header h1 {
+                font-size: 26px;
+            }
+
+            header p {
+                font-size: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 50px 15px;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .card {
+                width: 95%;
+            }
+
+            .design-image {
+                height: 320px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>🌸 Sadguru Fashion Point 🌸</h1>
+
+        <p>
+            Aari Work & Printed Designs
+        </p>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#aari">Aari Work</a>
+
+        <a href="#printed">Printed</a>
+
+        <a href="#about">About</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <h2>
+            <strong> Welcome to Sadguru Fashion Point</strong>
+        </h2>
+
+        <p>
+
+            वेगवेगळ्या प्रकारचे सुंदर
+            <b>आरी वर्क Designs</b>
+            तसेच
+            <b>Printed Designs</b>
+            करून मिळेल.
+
+        </p>
+
+        <a href="#contact" class="btn">
+            Contact Us
+        </a>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="section" id="services">
+
+        <h2>
+            Our Services
+        </h2>
+
+        <div class="cards">
+
+            <!-- AARI SERVICE -->
+
+            <div class="card aari-box">
+
+                <img src="/images/ari1.jpg.jpeg"
+                     alt="Aari Work Design"
+                     class="design-image">
+
+                <h3>
+                    Aari Work
+                </h3>
+
+
+                    सुंदर आणि आकर्षक
+                    आरी वर्क वेगवेगळ्या
+                    प्रकारच्या डिझाईन्समध्ये
+                    करून मिळेल.
+
+                </p>
+
+            </div>
+
+
+            <!-- PRINTED SERVICE -->
+
+            <div class="card">
+
+                <img src="/images/printed.jpg.jpeg"
+                     alt="Printed Design"
+                     class="design-image">
+
+                <h3>
+                    Printed Designs
+                </h3>
+
+                <p>
+
+                    तुमच्या आवडीनुसार
+                    आकर्षक Printed Designs
+                    करून मिळतील.
+
+                </p>
+
+            </div>
+
+
+            <!-- CUSTOM SERVICE -->
+
+            <div class="card">
+
+                <img src="/images/custom1.jpg.jpeg"
+                     alt="Custom Design"
+                     class="design-image">
+
+                <h3>
+                    Custom Designs
+                </h3>
+
+                <p>
+
+                    तुमच्या पसंतीनुसार
+                    Custom Design तयार
+                    करून मिळेल.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- AARI WORK GALLERY -->
+
+    <section class="section" id="aari">
+
+        <h2>
+            🧵 Aari Work Designs
+        </h2>
+
+        <div class="cards">
+
+            <!-- AARI IMAGE 1 -->
+
+            <div class="card">
+
+                <img src="/images/ari2.jpg.jpeg"
+                     alt="Aari Work Design 1"
+                     class="design-image">
+
+                <h3>
+                    Beautiful Aari Work
+                </h3>
+
+                <p>
+                    सुंदर आणि आकर्षक
+                    Aari Work Design.
+                </p>
+
+            </div>
+
+
+            <!-- AARI IMAGE 2 -->
+
+            <div class="card">
+
+                <img src="/images/ari3.jpg.jpeg"
+                     alt="Aari Work Design 2"
+                     class="design-image">
+
+                <h3>
+                    Latest Aari Design
+                </h3>
+
+                <p>
+                    नवीन आणि आकर्षक
+                    Aari Work Design.
+                </p>
+
+            </div>
+
+
+            <!-- AARI IMAGE 3 -->
+
+            <div class="card">
+
+                <img src="/images/ari4.jpg.jpeg"
+                     alt="Aari Work Design 3"
+                     class="design-image">
+
+                <h3>
+                    Designer Aari Work
+                </h3>
+
+                <p>
+                    तुमच्या आवडीनुसार
+                    Designer Aari Work.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRINTED DESIGN GALLERY -->
+
+    <section class="section" id="printed">
+
+        <h2>
+            🎨 Printed Designs
+        </h2>
+
+        <div class="cards">
+
+            <!-- PRINTED IMAGE 1 -->
+
+            <div class="card">
+
+                <img src="/images/printed2.jpg.jpeg"
+                     alt="Printed Design 1"
+                     class="design-image">
+
+                <h3>
+                    Beautiful Printed Design
+                </h3>
+
+                <p>
+                    आकर्षक Printed Design
+                    तुमच्या आवडीनुसार
+                    करून मिळेल.
+                </p>
+
+            </div>
+
+
+            <!-- PRINTED IMAGE 2 -->
+
+            <div class="card">
+
+                <img src="/images/printed3.jpg.jpeg"
+                     alt="Printed Design 2"
+                     class="design-image">
+
+                <h3>
+                    Latest Printed Design
+                </h3>
+
+                <p>
+                    नवीन आणि सुंदर
+                    Printed Design.
+                </p>
+
+            </div>
+
+
+            <!-- PRINTED IMAGE 3 -->
+
+            <div class="card">
+
+                <img src="/images/printed4.jpg.jpeg"
+                     alt="Printed Design 3"
+                     class="design-image">
+
+                <h3>
+                    Designer Print
+                </h3>
+
+                <p>
+                    तुमच्या पसंतीनुसार
+                    सुंदर Printed Design.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="section about" id="about">
+
+        <h2>
+            About Us
+        </h2>
+
+        <p>
+
+            <b>Sadguru Fashion Point</b>
+            येथे सुंदर आणि आकर्षक
+            Aari Work तसेच Printed Designs
+            उपलब्ध आहेत.
+
+            <br><br>
+
+            तुमच्या आवडीनुसार विविध प्रकारचे
+            Designs तयार करून मिळतील.
+
+            <br><br>
+
+            Quality Work • Beautiful Designs
+            • Customer Satisfaction
+
+            <br><br>
+
+            📍 <b>Sarawade</b>
+
+        </p>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="section contact" id="contact">
+
+        <h2>
+            Contact Us
+        </h2>
+
+        <p>
+            📞 9168907360
+            📞 9765575154
+
+        </p>
+
+        <p>
+            📍<strong>Sarawade</strong> 
+        </p>
+
+        <br>
+
+        <a href="tel:9168907360"
+           class="btn">
+
+            📞 Call Now
+
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <strong>Sadguru Fashion Point</strong>
+
+        <br>
+
+        All Rights Reserved
+
+    </footer>
+
+</body>
+
+</html>
